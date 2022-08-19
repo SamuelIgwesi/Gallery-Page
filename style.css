@@ -1,0 +1,92 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #f0f9fa;
+	box-sizing: border-box;
+	text-align: center;
+	margin-top: 15px;
+}
+.dp{
+	border-radius: 100%;
+	width: 110px;
+	height: 110px;
+	object-fit: fill;
+}
+.head h3{
+	margin-top: 5px;
+	margin-bottom: 0;
+	font-weight: 600;
+	font-family: serif;
+}
+.head p{
+	opacity: 0.6;
+}
+.stats{
+	position: relative;
+	left: 37%;
+	margin: 0 0 20px;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	width: 320px;
+	font-family: sans-serif;
+}
+.stats div{
+	padding: 5px;
+	line-height: 1px;
+	border-radius: 7px;
+	background-color: lightgray;
+	align-self: center;
+}
+.grid{
+	display: inline-grid;
+	grid-gap: 10px;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: 440px;
+	justify-items: center;
+	
+	grid-template-areas: 
+    "grid-1 grid-2 grid-2"
+    "grid-3 grid-3 grid-4"
+    "grid-5 grid-6 grid-4";
+}
+
+.grid img{
+	height: 140px;
+	border-radius: 10px;
+}
+.grid-1{
+    grid-area: grid-1;
+}
+.grid-2{
+    grid-area: grid-2;
+}
+.grid-3{
+    grid-area: grid-3;
+}
+#grid-4{
+	grid-area: grid-4;
+    grid-row: 2 / span 2;
+	height: 290px;
+}
+footer{
+	opacity: 0.5;
+}
+@media screen and (max-width: 920px){
+	body{
+		margin-top: 30px;
+	}
+	.stats{
+		left: 27%;
+	}
+}
+@media screen and (max-width: 720px){
+	.stats{
+		left: 22%;
+	}
+	.grid{
+		margin-left: 40px;
+	}
+}
